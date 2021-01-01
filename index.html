@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+<!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+<!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
+<!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
+
+<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+<!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
+</head>
+<body>
+    <div class="main">
+        <h1 class="main-h1">3D Model Demo </h1>
+        <model-viewer 
+            id="3dTest"
+            class="test"
+            src="tm-1.gltf"
+            ar
+            alt="A 3D model used for demo purposes" 
+            auto-rotate camera-controls
+            shadow-intensity="1"
+            stage-light-intensity="3" environment-intensity="2"
+            camera-orbit="180deg 65deg 3m"
+            >      
+        </model-viewer>
+        <div class="bottom-bar"> 
+                <div id="change" class="change-button">
+                    🔄 
+                </div>
+                <div id="playButton" class="play-button">
+                    <div id="playButtonContent" class="play-button__icon"> 	
+                    ⏸
+                    </div>
+                </div>
+
+        
+    </div>
+
+    </div>
+    
+   
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"> </script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"> </script>
+
+    <script type="text/javascript" src="./berk.js"> </script>
+</body>
+</html>

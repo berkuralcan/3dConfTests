@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.3px;
+    color: #e4c7c7;
+    font-size: 24px;
+    margin: 10px auto;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.test {
+    height: 80vh;
+    margin: 10px auto;
+    width: 90vw;   
+}
+
+.test:focus {
+    outline: none !important;
+}
+
+.userInput {
+    outline: 0
+}
+.userInput:webkit-direct-focus {
+    outline: 0 !important;
+}
+
+.play-button {
+
+    cursor: pointer;
+    
+}
+
+.play-button__icon  {
+    font-size: 50px;
+
+}
+
+.bottom-bar {
+    width: 85%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.change-button {
+    cursor: pointer;
+    font-size: 50px;
+}
