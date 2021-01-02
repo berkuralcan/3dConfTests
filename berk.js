@@ -6,6 +6,9 @@ const playButton = document.getElementById("playButton");
 const playButtonContent = document.getElementById("playButtonContent")
 const mainTest = document.getElementById("3dTest")
 const changeButton = document.getElementById("change")
+const modelName = document.getElementById("model-name")
+modelName.innerHTML = "Test_Model_02.gltf"
+
 
 const rotation = function() {
     console.log("Performing rotation.")
@@ -30,16 +33,21 @@ playButton.addEventListener("click", function() {
     rotation()
 })
 
-let sources = ["tm-1.gltf", "tm-2.gltf", "tm-3.glb", "tm-4.gltf", "tm-5.gltf" ]
+let sources = ["Test_Model_02.gltf", "Test_Model_02_ReTopo01.gltf", "Test_Model_02_ReTopo02.gltf", "Test_Model_02_NoSubDiv.gltf" ]
 let chosenModel = 0
 
+
 const changed = function() {
+    
     chosenModel++
+    modelName.innerHTML = sources[chosenModel]
     console.log(chosenModel)
     mainTest.setAttribute("src", sources[chosenModel])
-    if(chosenModel >= 5) {
+    if(chosenModel >= 4) {
         chosenModel = 0    
         mainTest.setAttribute("src", sources[0])
+        modelName.innerHTML = "Test_Model_02.gltf"
+        
     }
 }
 
