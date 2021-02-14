@@ -43,7 +43,7 @@ const changed = function() {
     modelName.innerHTML = sources[chosenModel]
     console.log(chosenModel)
     mainTest.setAttribute("src", sources[chosenModel])
-    if(chosenModel >= 2) {
+    if(chosenModel >= 1) {
         chosenModel = 0    
         mainTest.setAttribute("src", sources[0])
         modelName.innerHTML = "Leather"
