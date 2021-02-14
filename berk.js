@@ -7,7 +7,7 @@ const playButtonContent = document.getElementById("playButtonContent")
 const mainTest = document.getElementById("3dTest")
 const changeButton = document.getElementById("change")
 const modelName = document.getElementById("model-name")
-modelName.innerHTML = "Test_Model_02_Diffuse.gltf"
+modelName.innerHTML = "Fabric"
 
 
 const rotation = function() {
@@ -33,7 +33,7 @@ playButton.addEventListener("click", function() {
     rotation()
 })
 
-let sources = ["Test_Model_02_Diffuse.gltf", "Test_Model_02_Normal.gltf"]
+let sources = ["sofa-fabric/SOFA_FABRIC_EXP_01.gltf", "sofa-leather/SOFA_FABRIC_EXP_01.gltf"]
 let chosenModel = 0
 
 
@@ -46,7 +46,7 @@ const changed = function() {
     if(chosenModel >= 2) {
         chosenModel = 0    
         mainTest.setAttribute("src", sources[0])
-        modelName.innerHTML = "Test_Model_02_Diffuse.gltf"
+        modelName.innerHTML = "Leather"
         
     }
 }
