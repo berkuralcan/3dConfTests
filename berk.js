@@ -33,7 +33,7 @@ playButton.addEventListener("click", function() {
     rotation()
 })
 
-let sources = ["sofa-fabric/SOFA_FABRIC_EXP_01.gltf", "sofa-leather/SOFA_FABRIC_EXP_01.gltf"]
+let sources = ["sofa-fabric/sf1.gltf", "sofa-leather/sf1.gltf"]
 let chosenModel = 0
 
 
