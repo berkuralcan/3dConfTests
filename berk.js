@@ -57,4 +57,18 @@ changeButton.addEventListener("click", function() {
 
 
 
+// Getting the source from upload:
 
+let modelSource = document.getElementById("modelSource")
+let modelSourceButton = document.getElementById("modelSourceApply")
+let modelViewerSpace = document.getElementById("model-viewer-space")
+
+const manualChange = function() {
+    manualSource = modelSource.value
+    mainTest.remove()
+    modelViewerSpace.appendChild(mainTest)
+    mainTest.setAttribute("src", manualSource)
+}
+
+
+modelSourceButton.addEventListener("click", manualChange)

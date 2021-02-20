@@ -71,3 +71,39 @@ body {
     cursor: pointer;
     font-size: 50px;
 }
+
+label{
+    font-size: 1.6rem;
+    margin: 10px auto;
+    text-align: left;
+    color: white;
+}
+
+#modelSource{
+    height: 2rem;
+    width: 50%;
+    margin: 0px auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.source-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+
+#modelSourceApply{
+    margin-top: 1rem;
+    width: 20%;
+    height: 3rem;
+    background-color: aliceblue;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#model-viewer-space {
+    border: 1px solid white;
+    overflow: hidden;
+}

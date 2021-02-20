@@ -17,6 +17,8 @@
 <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
 <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
 
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
 <!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
 <!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
 
@@ -26,7 +28,13 @@
 <body>
     <div class="main">
         <h1 id="model-name" class="main-h1">3D Model Demo </h1>
-        <model-viewer 
+        <div class="source-form">
+            <label for="modelSource">Kullanmak istediğin model'in URL'i:</label>
+            <input id="modelSource" name="modelSource" type="text">
+            <button type="button" id="modelSourceApply">Göster</button>
+        </div>
+        <div id="model-viewer-space">
+            <model-viewer 
             id="3dTest"
             class="test"
             src="sofa-fabric/sf1.gltf"
@@ -38,6 +46,8 @@
             camera-orbit="180deg 65deg 3m"
             >      
         </model-viewer>
+        </div>
+      
         <div class="bottom-bar"> 
                 <div id="change" class="change-button">
                     🔄 
